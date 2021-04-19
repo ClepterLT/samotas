@@ -17,8 +17,8 @@ const pagesRoot = 'http://localhost:3000/static_html/';
 const imagesRoot = '../assets/images/';
 
 module.exports = {
-  siteTitle: '',
-  siteDescription: '',
+  siteTitle: 'Šamoto keramika',
+  siteDescription: 'gaminiai iš šamoto molio',
   ml: ml,
   logos: {
     white: `${imagesRoot}logo-white.png`,
@@ -35,7 +35,7 @@ module.exports = {
     links: [ml.home, ml.projects, ml.about, ml.contact],
   },
   footer: {
-    copyright: '@ 2020 Horion Digital',
+    copyright: '@ 2021 PP Creations',
     links: [fl.termsConditions, fl.dataProtection, fl.impressum, fl.survey, fl.faq],
   },
   home: {
