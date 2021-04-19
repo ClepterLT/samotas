@@ -1,0 +1,7 @@
+<nav class="nav-header">
+    <ul class="nav-header__list">
+        {{#each header.links as |item|}}
+            <li class="nav-header__item"><a href="{{item.href}}" class="nav-header__link">{{item.title}}</a></li>
+        {{/each}}
+    </ul>
+</nav>
