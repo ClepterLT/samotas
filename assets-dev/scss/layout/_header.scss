@@ -1,0 +1,48 @@
+.header {
+    background-color: $color-primary;
+    height: 7rem;
+    font-size: 1.7rem;
+    color: $color-white;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 3rem;
+    margin-left: 2rem;
+
+    flex: 1;
+}
+
+.nav-header {
+    margin-right: 1rem;
+
+    &__list {
+        list-style: none;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        padding: 1rem;
+    }
+
+    &__link:link,
+    &__link:visited {
+        color: $color-secondary;
+        text-decoration: none;
+        letter-spacing: 0.1rem;
+    }
+
+    &__link:hover,
+    &__link:active {
+        padding-bottom: 2.2rem;
+        border-bottom: solid 2px $color-secondary;
+    }
+}
+
+.header-button {
+    margin-right: 2rem;
+}

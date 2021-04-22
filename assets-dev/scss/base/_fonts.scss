@@ -2,7 +2,7 @@
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 @mixin generateFont($local-font, $font-family, $font-root, $filename, $weight, $style) {
   font-family: $font-family;
@@ -12,29 +12,6 @@
   url('#{$font-root}#{$filename}.svg##{$local-font}') format('svg');
   font-weight: $weight;
   font-style: $style;
-}
-@mixin generateGothamFont($filename, $weight, $style: normal) {
-  $font-root: '../fonts/gotham/';
-  $font: 'Gotham';
-  @include generateFont($filename, $font, $font-root, $filename, $weight, $style);
-}
-@mixin generateBebasNeueFont($filename, $weight, $style: normal) {
-  $font-root: '../fonts/bebasneue/';
-  $font: 'Bebas Neue';
-  @include generateFont($filename, $font, $font-root, $filename, $weight, $style);
-}
-
-@font-face {
-  @include generateGothamFont('gotham-light', 300);
-}
-@font-face {
-  @include generateGothamFont('gotham-medium', 500);
-}
-@font-face {
-  @include generateGothamFont('gotham-bold', 700);
-}
-@font-face {
-  @include generateBebasNeueFont('bebasneuebold', 700);
 }
 
 // ICONS FONT:
