@@ -10,7 +10,7 @@
 
 .logo {
     font-size: 3rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
 
     flex: 1;
 }
@@ -26,23 +26,22 @@
     }
 
     &__item {
-        padding: 1rem;
+        padding: 1rem 2rem;
     }
 
     &__link:link,
     &__link:visited {
         color: $color-secondary;
         text-decoration: none;
-        letter-spacing: 0.1rem;
     }
 
     &__link:hover,
     &__link:active {
-        padding-bottom: 2.2rem;
-        border-bottom: solid 2px $color-secondary;
+        padding-bottom: 2.1rem;
+        border-bottom: solid 3px $color-secondary;
     }
 }
 
 .header-button {
-    margin-right: 2rem;
+    margin-right: 4rem;
 }
