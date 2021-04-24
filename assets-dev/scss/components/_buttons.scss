@@ -11,6 +11,32 @@
     &:hover {
         background-color: $color-pharlap;
         color: $color-white;
+        box-shadow: 0 .5rem 2rem rgba($color-white, .2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.button-secondary {
+    background-color: $color-black;
+    font-size: 1.6rem;
+    border: none;
+    padding: 1.3rem 2rem;
+    color: $color-secondary;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-martini;
+        color: $color-white;
+        box-shadow: 0 .5rem 2rem rgba($color-white, .2);
     }
 
     &:focus {

@@ -45,3 +45,41 @@
 .header-button {
     margin-right: 4rem;
 }
+
+.hero {
+    background-image: url($hero-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative;
+}
+
+.hero-text-box {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70));
+    border-radius: 2px;
+    padding: 3rem;
+    color: $color-white;
+
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 4rem;
+    }
+
+    &__text {
+        font-size: 1.8rem;
+    }
+
+    &__button-container {
+        margin-top: 2rem;
+
+        display: flex;
+        align-items: center;
+    }
+}

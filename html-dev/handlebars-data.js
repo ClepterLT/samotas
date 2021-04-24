@@ -18,10 +18,13 @@ const imagesRoot = '../assets/images/';
 
 module.exports = {
   siteTitle: 'Šamoto keramika',
-  siteDescription: 'gaminiai iš šamoto molio',
+  siteDescription: 'Gaminiai iš šamoto molio',
   ml: ml,
   home: {
     link: ml.home,
+  },
+  roots: {
+    images: imagesRoot,
   },
   logos: {
     blue: `${imagesRoot}logo-blue.png`,
