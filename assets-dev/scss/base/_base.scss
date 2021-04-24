@@ -23,6 +23,15 @@ html {
   }
 }
 
+.row {
+  max-width: $row-width;
+  margin: 0 auto;
+}
+
+section {
+  padding: 6rem 0;
+}
+
 ::selection {
   // background-color: ;
   // color: ;

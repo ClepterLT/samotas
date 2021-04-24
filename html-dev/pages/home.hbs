@@ -11,12 +11,24 @@
         {{!-- Here goes all content of the "main" tag --}}
         <section class="hero">
           <div class="hero-text-box">
-            <h1 class="hero-text-box__title">{{ siteDescription }}</h1>
-            <p class="hero-text-box__text">20 metų gaminame kartų kartoms.</p>
+            <h1 class="heading-primary">{{ siteDescription }}</h1>
+            <p class="hero-text-box__text">{{{ texts.hero }}}</p>
             <div class="hero-text-box__button-container">
               <button class="button-primary button-margin-right">Produktai</button>
               <button class="button-secondary">Susisiekite</button>
             </div>
+          </div>
+        </section>
+
+        <section class="featured-products">
+          <div class="row">
+            <h2 class="heading-secondary">Produktai</h2>
+            <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2 }'>
+              {{#each carousel.images as |img|}}
+                <img class="carousel-image" data-flickity-lazyload="{{roots.images}}{{img.src}}" alt="{{img.alt}}">
+              {{/each}}
+            </div>
+           <div class="button-wrapper"><button class="button-inline">Pamatykite daugiau &raquo;</button></div>
           </div>
         </section>
 

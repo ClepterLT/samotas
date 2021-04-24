@@ -1,3 +1,6 @@
+const pagesRoot = 'http://localhost:3000/static_html/';
+const imagesRoot = '../assets/images/';
+
 const ml = {
   home: {href: '#', title: 'Pagrindinis'},
   products: {href: '#', title: 'Mūsų keramika'},
@@ -13,12 +16,20 @@ const fl = {
   faq: {href: '#', title: 'faq'},
 };
 
-const pagesRoot = 'http://localhost:3000/static_html/';
-const imagesRoot = '../assets/images/';
+const carousel = {
+  vase: {src: `${imagesRoot}product-1.jpg`, alt: 'Vazonas'},
+  lamp: {src: `${imagesRoot}product-2.jpg`, alt: 'Pastatomas šviestuvas'},
+  fountain: {src: `${imagesRoot}product-3.jpg`, alt: 'Fontanas'},
+  fireplace: {src: `${imagesRoot}product-4.jpg`, alt: 'Židinys'},
+  hanging: {src: `${imagesRoot}product-5.jpg`, alt: 'Paveikslas'},
+}
 
 module.exports = {
   siteTitle: 'Šamoto keramika',
   siteDescription: 'Gaminiai iš šamoto molio',
+  texts: {
+    hero: '20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.',
+  },
   ml: ml,
   home: {
     link: ml.home,
@@ -26,10 +37,8 @@ module.exports = {
   roots: {
     images: imagesRoot,
   },
-  logos: {
-    blue: `${imagesRoot}logo-blue.png`,
-    black: `${imagesRoot}logo-black.png`,
-    color: `${imagesRoot}logo-color.png`,
+  carousel: {
+    images: [carousel.vase, carousel.lamp, carousel.fountain, carousel.fireplace, carousel.hanging],
   },
   socials: [
     {title: 'Youtube', icon: 'ic-youtube', href: '#', canShare: false,},

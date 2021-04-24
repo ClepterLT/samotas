@@ -6,3 +6,15 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
+
+.heading-primary {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 4rem;
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3.5rem;
+}

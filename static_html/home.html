@@ -8,6 +8,7 @@
       <title>Šamoto keramika</title>
       <link rel="stylesheet" href="../assets/css/vendor.css">
       <link rel="stylesheet" href="../assets/css/app.css">
+      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
     <body class="">
     <header class="header ">
@@ -27,12 +28,26 @@
     <main>
         <section class="hero">
           <div class="hero-text-box">
-            <h1 class="hero-text-box__title">Gaminiai iš šamoto molio</h1>
-            <p class="hero-text-box__text">20 metų gaminame kartų kartoms.</p>
+            <h1 class="heading-primary">Gaminiai iš šamoto molio</h1>
+            <p class="hero-text-box__text">20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.</p>
             <div class="hero-text-box__button-container">
               <button class="button-primary button-margin-right">Produktai</button>
               <button class="button-secondary">Susisiekite</button>
             </div>
+          </div>
+        </section>
+
+        <section class="featured-products">
+          <div class="row">
+            <h2 class="heading-secondary">Produktai</h2>
+            <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2 }'>
+                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-1.jpg" alt="Vazonas">
+                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-2.jpg" alt="Pastatomas šviestuvas">
+                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-3.jpg" alt="Fontanas">
+                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-4.jpg" alt="Židinys">
+                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-5.jpg" alt="Paveikslas">
+            </div>
+           <div class="button-wrapper"><button class="button-inline">Pamatykite daugiau &raquo;</button></div>
           </div>
         </section>
 
@@ -43,6 +58,7 @@
             <div class="footer__copyright">@ 2021 PP Creations</div>
         </footer>  
         <script type="text/javascript" src="../assets/js/app.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     </body>
 </html>
 

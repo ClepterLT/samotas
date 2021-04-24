@@ -1,3 +1,8 @@
+.button-wrapper {
+    text-align: center;
+    margin-top: 5rem;
+}
+
 .button-primary {
     background-color: $color-secondary;
     font-size: 1.6rem;
@@ -11,7 +16,7 @@
     &:hover {
         background-color: $color-pharlap;
         color: $color-white;
-        box-shadow: 0 .5rem 2rem rgba($color-white, .2);
+        box-shadow: 0 .5rem 1rem rgba($color-white, .2);
     }
 
     &:focus {
@@ -35,6 +40,31 @@
 
     &:hover {
         background-color: $color-martini;
+        color: $color-white;
+        box-shadow: 0 .5rem 2rem rgba($color-white, .2);
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+.button-inline{
+    font-size: 1.6rem;
+    border: none;
+    padding: .5rem 1rem;
+    color: $color-primary;
+    background-color: transparent;
+    text-transform: uppercase;
+    border-bottom: 2px solid $color-primary;
+    transition: all .2s;
+
+    &:hover {
+        background-color: $color-pharlap;
         color: $color-white;
         box-shadow: 0 .5rem 2rem rgba($color-white, .2);
     }
