@@ -23,12 +23,25 @@
         <section class="featured-products">
           <div class="row">
             <h2 class="heading-secondary">Produktai</h2>
-            <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2 }'>
+            <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2, "freeScroll": true, "wrapAround": true }'>
               {{#each carousel.images as |img|}}
                 <img class="carousel-image" data-flickity-lazyload="{{roots.images}}{{img.src}}" alt="{{img.alt}}">
               {{/each}}
             </div>
            <div class="button-wrapper"><button class="button-inline">Pamatykite daugiau &raquo;</button></div>
+          </div>
+        </section>
+
+        <section class="section-about">
+          <div class="row u--flex">
+            <div class="about">
+              <img src="{{roots.images}}about-section.jpg" alt="Apie mus" class="about__img">
+              <div class="about__box">
+                <h2 class="heading-secondary">Apie mus</h2>
+                <p class="about__text">{{ texts.about }}</p>
+                <button class="button-secondary">Sužinoti daugiau</button>
+              </div>
+            </div>
           </div>
         </section>
 

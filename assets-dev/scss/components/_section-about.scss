@@ -1,0 +1,27 @@
+.about {
+    width: 100%;
+    position: relative;
+
+    &__img {
+        height: 50rem;
+        width: auto;
+
+        display: block;
+    }
+
+    &__box {
+        width: 50%;
+        border: 1rem solid $color-primary;
+        padding: 2rem;
+        background-color: $color-white;
+
+        position: absolute;
+        top: 10%;
+        left: 50%;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        margin: 1.5rem 0 2.5rem 0;
+    }
+}

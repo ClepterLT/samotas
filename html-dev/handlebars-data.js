@@ -22,6 +22,11 @@ const carousel = {
   fountain: {src: `${imagesRoot}product-3.jpg`, alt: 'Fontanas'},
   fireplace: {src: `${imagesRoot}product-4.jpg`, alt: 'Židinys'},
   hanging: {src: `${imagesRoot}product-5.jpg`, alt: 'Paveikslas'},
+  cylinder: {src: `${imagesRoot}product-6.jpg`, alt: 'Cilindrinis vazonas'},
+  classic: {src: `${imagesRoot}product-7.jpg`, alt: 'Klasikinis vazonas'},
+  round: {src: `${imagesRoot}product-8.jpg`, alt: 'Rutulinis vazonas'},
+  vase2: {src: `${imagesRoot}product-9.jpg`, alt: 'Klasikinias vazonas'},
+  mushroom: {src: `${imagesRoot}product-10.jpg`, alt: 'Grybo formos skulptūra'},
 }
 
 module.exports = {
@@ -29,6 +34,7 @@ module.exports = {
   siteDescription: 'Gaminiai iš šamoto molio',
   texts: {
     hero: '20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.',
+    about: 'Šeimos verslas nuo 1990 m. Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai. Tai dailininkų fantazijos žaismas, meistrų perteikta širdžių šiluma Jums iš kartos į kartą.'
   },
   ml: ml,
   home: {
@@ -38,7 +44,7 @@ module.exports = {
     images: imagesRoot,
   },
   carousel: {
-    images: [carousel.vase, carousel.lamp, carousel.fountain, carousel.fireplace, carousel.hanging],
+    images: [carousel.vase, carousel.lamp, carousel.fountain, carousel.fireplace, carousel.hanging, carousel.cylinder, carousel.classic, carousel.round, , carousel.vase2, carousel.mushroom],
   },
   socials: [
     {title: 'Youtube', icon: 'ic-youtube', href: '#', canShare: false,},
