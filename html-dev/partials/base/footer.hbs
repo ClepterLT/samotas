@@ -1,6 +1,27 @@
         <footer id="footer" class="footer {{extraFooterClasses}}">
-
-            <div class="footer__copyright">{{@root.footer.copyright}}</div>
+            <div class="row">
+                <div class="footer_nav">
+                    <div class="footer__column">
+                        <h3 class="heading-tertiary">Kontaktai</h3>
+                        <ul class="footer__contact">
+                            <li class="footer__contact-line">{{footer.company}}</li>
+                            <li class="footer__contact-line">{{footer.address}}</li>
+                            {{#each footer.phone as |phone|}}
+                                <li class="footer__contact-line">{{phone}}</li>
+                            {{/each}}
+                            <li class="footer__contact-line">{{footer.email}}</li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="heading-tertiary">Meniu</h3>
+                        <ul class="nav-footer">
+                            {{#each header.links as |item|}}
+                                <li class="nav-footer__item"><a href="{{item.href}}" class="nav-footer__link">{{item.title}}</a></li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </footer>  
         <script type="text/javascript" src="../assets/js/app.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

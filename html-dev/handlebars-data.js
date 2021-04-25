@@ -8,14 +8,6 @@ const ml = {
   contact: {href: '#', title: 'Kontaktai'},
 };
 
-const fl = {
-  termsConditions: {href: '#', title: 'Terms & conditions'},
-  dataProtection: {href: '#', title: 'Data protection'},
-  impressum: {href: '#', title: 'Impressum'},
-  survey: {href: '#', title: 'Survey'},
-  faq: {href: '#', title: 'faq'},
-};
-
 const carousel = {
   vase: {src: `${imagesRoot}product-1.jpg`, alt: 'Vazonas'},
   lamp: {src: `${imagesRoot}product-2.jpg`, alt: 'Pastatomas šviestuvas'},
@@ -48,9 +40,6 @@ module.exports = {
     images: [carousel.vase, carousel.lamp, carousel.fountain, carousel.fireplace, carousel.hanging, carousel.cylinder, carousel.classic, carousel.round, , carousel.vase2, carousel.mushroom],
   },
   socials: [
-    {title: 'Youtube', icon: 'ic-youtube', href: '#', canShare: false,},
-    {title: 'Trip Advisor', icon: 'ic-tripadvisor', href: '#', canShare: false,},
-    {title: 'Twitter', icon: 'ic-twitter', href: '#', canShare: true,},
     {title: 'Facebook', icon: 'ic-facebook', href: '#', canShare: true,},
   ],
   header: {
@@ -58,6 +47,12 @@ module.exports = {
   },
   footer: {
     copyright: '@ 2021 PP Creations',
-    links: [fl.termsConditions, fl.dataProtection, fl.impressum, fl.survey, fl.faq],
+    company: this.siteTitle,
+    address: 'Jazminų g. 30a, Panevėžys',
+    phone: [
+      {phone1: '+37069984297', phone2: '+37067220134', phone3: '8-45576654'},
+    ],
+    email: 'samotokeramika@gmail.com',
+    gallery: 'Amerikos g.2A, Panevėžys',
   }
 };
