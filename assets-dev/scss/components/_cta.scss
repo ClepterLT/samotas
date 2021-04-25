@@ -1,0 +1,36 @@
+.cta {
+    color: $color-white;
+    background: linear-gradient($color-primary, $color-pharlap);
+    padding: 8rem 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        font-size: 2.4rem;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+
+    &__number {
+        background-color: $color-secondary;
+        padding: 1.6rem 4rem;
+        border-radius: 2px;
+        box-shadow: 0 .5rem 2rem rgba($color-black, .2);
+        font-size: 2.8rem;
+        color: $color-black;
+        text-transform: uppercase;
+        font-weight: 400;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+            box-shadow: 0 .5rem 2rem rgba($color-white, .2);
+            transform: scale(1.2);
+        }
+    }
+}
