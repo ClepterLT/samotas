@@ -3,16 +3,15 @@
     height: 7rem;
     font-size: 1.7rem;
     color: $color-white;
-
-    display: flex;
-    align-items: center;
 }
 
 .logo {
     font-size: 3rem;
-    margin-left: 4rem;
+}
 
-    flex: 1;
+.nav-header-wrap {
+    display: flex;
+    align-items: center;
 }
 
 .nav-header {
@@ -39,37 +38,5 @@
     &__link:active {
         padding-bottom: 2.1rem;
         border-bottom: solid 3px $color-secondary;
-    }
-}
-
-.header-button {
-    margin-right: 4rem;
-}
-
-.hero {
-    background-image: url($hero-image);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
-    position: relative;
-}
-
-.hero-text-box {
-    @include absLeft;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70));
-    border-radius: 2px;
-    padding: 3rem;
-    color: $color-white;
-
-    &__text {
-        font-size: 1.8rem;
-    }
-
-    &__button-container {
-        margin-top: 2rem;
-
-        display: flex;
-        align-items: center;
     }
 }

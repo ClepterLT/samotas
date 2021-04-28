@@ -7,14 +7,21 @@ body {
   overflow-x: hidden;
 }
 
-.heading-primary {
+.heading {
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 4rem;
-}
 
-.heading-secondary {
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 3.5rem;
+  &--primary {
+    font-size: 4rem;
+  }
+
+  &--secondary {
+    font-size: 3.5rem;
+  }
+
+  &--tertiary {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
 }

@@ -1,13 +1,15 @@
-.button-margin-right {
-    &:not(:last-child) {
-        margin-right: 2rem;
-    }
+.u-mr-2 {
+    margin-right: 2rem;
 }
 
-.u--center {
-    margin: 0 auto;
-}
-
-.u--flex {
+.u-flex {
     display: flex;
+    flex: 1;
+}
+
+.u-flex-center {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

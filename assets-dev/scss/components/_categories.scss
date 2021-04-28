@@ -1,0 +1,48 @@
+.categories {
+
+    &__wrap {
+        background-color: #eee;
+        border: 1px solid #bdbdbd;
+        border-radius: 3px;
+        font-size: 1.6rem;
+
+        flex: 0 0 50%;
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: #757575;
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+
+            position: absolute;
+            top: 35%;
+            right: 1rem;
+        }
+    }
+
+    &__list {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: .5rem 2rem;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__item {
+
+    }
+}

@@ -3,63 +3,53 @@
     margin-top: 5rem;
 }
 
-.button-primary {
-    background-color: $color-secondary;
-    font-size: 1.6rem;
-    border: none;
-    padding: 1.3rem 2rem;
-    color: $color-black;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all .2s;
+.button {
+    &:link,
+    &:visited {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 2.5rem;
+        border-radius: 2px;
+        transition: all .2s;
+    }
 
     &:hover {
-        background-color: $color-pharlap;
-        color: $color-white;
         box-shadow: 0 .5rem 1rem rgba($color-white, .2);
-    }
-
-    &:focus {
-        outline: none;
-    }
-
-    &:active {
-        transform: translateY(1px);
-    }
-}
-
-.button-secondary {
-    background-color: $color-black;
-    font-size: 1.6rem;
-    border: none;
-    padding: 1.3rem 2rem;
-    color: $color-secondary;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: all .2s;
-
-    &:hover {
-        background-color: $color-martini;
         color: $color-white;
-        box-shadow: 0 .5rem 2rem rgba($color-white, .2);
-    }
-
-    &:focus {
-        outline: none;
     }
 
     &:active {
         transform: translateY(1px);
     }
+
+    &-primary {
+        background-color: $color-secondary;
+        color: $color-black;
+    
+        &:hover {
+            background-color: $color-pharlap;
+        }
+    }
+
+    &-secondary {
+        background-color: $color-black;
+        color: $color-secondary;
+    
+        &:hover {
+            background-color: $color-martini;
+        }
+    }
 }
 
-.button-inline{
+.button-inline:link,
+.button-inline:visited {
     font-size: 1.6rem;
-    border: none;
+    text-transform: uppercase;
+    text-decoration: none;
     padding: .5rem 1rem;
     color: $color-primary;
     background-color: transparent;
-    text-transform: uppercase;
     border-bottom: 2px solid $color-primary;
     transition: all .2s;
 
@@ -67,10 +57,6 @@
         background-color: $color-pharlap;
         color: $color-white;
         box-shadow: 0 .5rem 2rem rgba($color-white, .2);
-    }
-
-    &:focus {
-        outline: none;
     }
 
     &:active {

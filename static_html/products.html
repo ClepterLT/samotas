@@ -28,58 +28,29 @@
         </>
     </header>
     <main>
-        <section class="hero">
-          <div class="row u-flex">
-            <div class="hero-text-box">
-              <h1 class="heading heading--primary">Gaminiai iš šamoto molio</h1>
-              <p class="hero-text-box__text">20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.</p>
-              <div class="hero-text-box__button-container">
-                <a href="#" class="button button-primary u-mr-2">Produktai</a>
-                <a href="#" class="button button-secondary">Susisiekite</a>
-              </div>
+
+        <section class="categories">
+            <div class="row u-flex">
+                <label class="heading--tertiary u-mr-2" for="product-categories">Pasirinkite kategoriją:</label>
+                <div class="categories__wrap">
+                    <select class="categories__list" name="product-categories" id="product-categories">
+                            <option value="vazos" class="categories__item">Vazos</option>
+                            <option value="paveikslai" class="categories__item">Paveikslai</option>
+                            <option value="sviestuvai" class="categories__item">Šviestuvai</option>
+                            <option value="skulpturos" class="categories__item">Skulptūros</option>
+                            <option value="fontanai" class="categories__item">Fontanai</option>
+                    </select>
+                </div>
             </div>
-          </div>
         </section>
 
-        <section class="featured-products">
-          <div class="row">
-            <h2 class="heading heading--secondary">Produktai</h2>
-            <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2, "freeScroll": true, "wrapAround": true }'>
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-1.jpg" alt="Vazonas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-2.jpg" alt="Pastatomas šviestuvas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-3.jpg" alt="Fontanas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-4.jpg" alt="Židinys">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-5.jpg" alt="Paveikslas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-6.jpg" alt="Cilindrinis vazonas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-7.jpg" alt="Klasikinis vazonas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-8.jpg" alt="Rutulinis vazonas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-9.jpg" alt="Klasikinias vazonas">
-                <img class="carousel-image" data-flickity-lazyload="../assets/images/product-10.jpg" alt="Grybo formos skulptūra">
-            </div>
-           <div class="button-wrapper"><a href="#" class="button-inline">Pamatykite daugiau &raquo;</a></div>
-          </div>
-        </section>
-
-        <section class="section-about">
-          <div class="row u-flex">
-            <div class="img-with-box">
-              <img src="../assets/images/about-section.jpg" alt="Apie mus" class="img-with-box__img">
-              <div class="img-with-box__box">
-                <h2 class="heading heading--secondary">Apie mus</h2>
-                <p class="img-with-box__text">Šeimos verslas nuo 1990 m. Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai. Tai dailininkų fantazijos žaismas, meistrų perteikta širdžių šiluma Jums iš kartos į kartą.</p>
-                <a href="#" class="button button-secondary">Sužinoti daugiau</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="cta">
-            <div class="cta__wrapper">
-                <h2 class="heading heading--primary">Susisiekite</h2>
-                <p class="cta__text">Turite klausimų? Paskambinkite mums.</p>
-                <a href="tel: +370 600 115 96" class="cta__number">+370 600 115 96</a>
-            </div>
-        </section>
+    <section class="cta">
+        <div class="cta__wrapper">
+            <h2 class="heading heading--primary">Susisiekite</h2>
+            <p class="cta__text">Turite klausimų? Paskambinkite mums.</p>
+            <a href="tel: +370 600 115 96" class="cta__number">+370 600 115 96</a>
+        </div>
+    </section>
     </main>
 
         <footer id="footer" class="footer ">

@@ -28,6 +28,11 @@ html {
   margin: 0 auto;
 }
 
+.row-big {
+  max-width: $row-big-width;
+  margin: 0 auto;
+}
+
 section {
   padding: 4rem 0;
 }

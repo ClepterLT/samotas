@@ -1,0 +1,30 @@
+{{>base/head
+  bodyClasses=bodyClasses
+}}
+
+    {{>modules/header
+        extraHeaderClasses=''
+    }}
+
+    <main>
+
+        <section class="categories">
+            <div class="row u-flex">
+                <label class="heading--tertiary u-mr-2" for="product-categories">Pasirinkite kategoriją:</label>
+                <div class="categories__wrap">
+                    <select class="categories__list" name="product-categories" id="product-categories">
+                        {{#each categories}}
+                            <option value="{{value}}" class="categories__item">{{title}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+        </section>
+
+    {{>modules/cta}}
+
+    </main>
+
+{{>base/footer
+  bodyClasses=bodyClasses
+}}
