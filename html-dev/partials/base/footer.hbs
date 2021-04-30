@@ -7,9 +7,9 @@
                             <li class="footer__item">{{siteTitle}}</li>
                             <li class="footer__item">{{footer.address}}</li>
                             {{#each footer.phones as |phone|}}
-                                <li class="footer__item">{{phone}}</li>
+                                <li class="footer__item"><a href="tel: {{phone}}" class="footer__link">{{phone}}</a></li>
                             {{/each}}
-                            <li class="footer__item">{{footer.email}}</li>
+                            <li class="footer__item"><a href="mailto: samotokeramika@gmail.com" class="footer__link">{{footer.email}}</a></li>
                         </ul>
                     </div>
                     <div class="footer__column">
@@ -34,7 +34,7 @@
                                 </svg>
                             </a>
                         </div>
-                        <p class="footer__copyright">{{footer.copyright}}</p>
+                        <p class="footer__copyright">{{{footer.copyright}}}</p>
                     </div>
                 
             </div>

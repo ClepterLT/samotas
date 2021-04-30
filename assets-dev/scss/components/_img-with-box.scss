@@ -1,6 +1,5 @@
 .img-with-box {
-    width: 100%;
-    position: relative;
+    display: flex;
 
     &__img {
         height: 50rem;
@@ -10,14 +9,13 @@
     }
 
     &__box {
-        width: 50%;
         border: 1rem solid $color-primary;
         padding: 2rem;
         background-color: $color-white;
 
-        position: absolute;
-        top: 10%;
-        left: 50%;
+        margin-top: 4rem;
+        margin-left: -12rem;
+        align-self: flex-start;
     }
 
     &__text {

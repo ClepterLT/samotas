@@ -9,15 +9,23 @@
     <main>
 
         <section class="categories">
-            <div class="row u-flex">
-                <label class="heading--tertiary u-mr-2" for="product-categories">Pasirinkite kategoriją:</label>
-                <div class="categories__wrap">
-                    <select class="categories__list" name="product-categories" id="product-categories">
+            <div class="row u-flex u-justify-end">
+                <div class="dropdown">
+                    <div class="dropdown__button">Pasirinkite kateogriją &#8628;</div>
+                    <div class="dropdown__list">
                         {{#each categories}}
-                            <option value="{{value}}" class="categories__item">{{title}}</option>
+                        <a href="{{href}}" class="dropdown__item">{{title}}</a>
                         {{/each}}
-                    </select>
+                    </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="row u-flex-center u-flex-wrap">
+                {{#each products}}
+                        {{>modules/img-with-box-small}}
+                {{/each}}
             </div>
         </section>
 

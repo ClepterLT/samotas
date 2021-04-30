@@ -63,3 +63,8 @@
         transform: translateY(1px);
     }
 }
+
+.button-inline--small:link,
+.button-inline--small:visited {
+    font-size: 1.2rem;
+}
