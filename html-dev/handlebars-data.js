@@ -1,10 +1,11 @@
 const pagesRoot = 'http://localhost:3000/static_html/';
 const imagesRoot = '../assets/images/';
+const iconRoot = '../assets/fonts/symbol-defs.svg#';
 
 const ml = {
   home: {href: 'home.html', title: 'Pagrindinis'},
   products: {href: 'products.html', title: 'Keramika'},
-  about: {href: '#', title: 'Apie mus'},
+  about: {href: 'aboutus.html', title: 'Apie mus'},
   contact: {href: '#', title: 'Kontaktai'},
 };
 
@@ -23,7 +24,6 @@ module.exports = {
   },
   texts: {
     hero: '20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.',
-    about: 'Šeimos verslas nuo 1990 m. Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai. Tai dailininkų fantazijos žaismas, meistrų perteikta širdžių šiluma Jums iš kartos į kartą.',
     cta: 'Turite klausimų? Paskambinkite mums.',
   },
   carousel: [
@@ -58,6 +58,26 @@ module.exports = {
     {src: `${imagesRoot}product-8.jpg`, alt: 'Rutulinis vazonas', code: 'Pictures0081',  href: '#'},
     {src: `${imagesRoot}product-9.jpg`, alt: 'Klasikinis vazonas', code: 'vazonas50x45',  href: '#'},
     {src: `${imagesRoot}product-10.jpg`, alt: 'Grybo formos skulptūra', code: 'DSC06662',  href: '#'},
+  ],
+  features: [
+    {feature: 'Rankų darbo',
+    text: 'Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai.',
+    icon: `${iconRoot}icon-hammer`},
+    {feature: 'Universalūs',
+    text: 'Mūsų dirbiniai papuoš Jūsų namus ir aplinką. Taip pat puikiai tiks ir dovanai.',
+    icon: `${iconRoot}icon-spinner10`},
+    {feature: 'Unikalūs',
+    text: 'Dailininkai-keramikai sukuria unikalių formų, įvairios apimties gaminius.',
+    icon: `${iconRoot}icon-magic-wand`},
+    {feature: 'Medžiagos',
+    text: 'Šamoto keramika, dar vadinama akmens masės keramika, degama aukštoje temperatūroje (1350 C)',
+    icon: `${iconRoot}icon-fire`},
+    {feature: 'Kokybė',
+    text: 'Gaminiai yra tvirti, neblunkančių atspalvių, atsparūs drėgmei, šalčiui, nekenksmingi žmogaus sveikatai.',
+    icon: `${iconRoot}icon-shield`},
+    {feature: 'Sertifikuoti',
+    text: 'Gamybai naudojamos medžiagos atitinka Europos kokybės reikalavimus.',
+    icon: `${iconRoot}icon-leaf`},
   ],
   socials: [
     {title: 'Facebook', icon: 'ic-facebook', href: '#', canShare: true,},

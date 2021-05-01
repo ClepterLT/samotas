@@ -1,0 +1,35 @@
+{{>base/head
+  bodyClasses=bodyClasses
+}}
+
+    {{>modules/header
+        extraHeaderClasses=''
+    }}
+
+    <main>
+
+        <section class="generations">
+          <div class="row">
+            {{>modules/img-with-box
+              photo='generations.jpg'
+              alt='Iš kartos į kartą'
+              head='Iš kartos į kartą'
+              text='“Šamoto keramikos” įmonė savo veiklą vykdo nuo 1990 metų. Įmonė gamina dekoratyvinės bei taikomosios keramikos dirbinius sodui ir namams.'
+              button='Susisiekite'
+            }}
+          </div>
+        </section>
+
+        <section class="features">
+            <div class="row u-flex-center u-flex-wrap">
+                {{>modules/features-card}}
+            </div>
+        </section>
+
+    {{>modules/cta}}
+
+    </main>
+
+{{>base/footer
+  bodyClasses=bodyClasses
+}}

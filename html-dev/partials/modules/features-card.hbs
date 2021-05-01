@@ -1,0 +1,11 @@
+{{#each features}}
+    <div class="features-card">
+        <div class="features-card__wrap">
+            <svg class="features-card__icon">
+                <use xlink:href="{{icon}}"></use>
+            </svg>
+            <h3 class="heading heading--tertiary">{{feature}}</h3>
+        </div>
+        <p class="features-card__text">{{text}}</p>
+    </div>
+{{/each}}
