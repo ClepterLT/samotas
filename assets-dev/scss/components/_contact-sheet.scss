@@ -1,0 +1,106 @@
+.contact {
+    color: $color-white;
+    background: linear-gradient($color-primary, $color-pharlap);
+    padding: 8rem 0 0 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        background-color: $color-white;
+        padding-bottom: 20rem;
+    }
+}
+
+.contact-sheet {
+    background-color: $color-white;
+    border-radius: 3px;
+    box-shadow: 0 .5rem 2rem rgba($color-black, .1);
+    color: $color-black;
+    overflow: hidden;
+    margin-top: 6rem;
+    margin-bottom: -10rem;
+
+    display: flex;
+
+    &__letter {
+        padding: 4rem 6rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea {
+            border: 1px solid $color-pharlap;
+            border-radius: 3px;
+            outline: none;
+            display: inline-block;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-family: inherit;
+        }
+
+        input[type=submit] {
+            background-color: $color-pharlap;
+            color: $color-white;
+            transition: all .2s;
+
+            &:hover {
+                background-color: $color-martini;
+            }
+        }
+    }
+
+    &__form-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info {
+        background-color: $color-pharlap;
+        padding: 4rem;
+        color: $color-grey;
+    }
+
+    &__list {
+        list-style: none;
+        margin-bottom: 2rem;
+        font-weight: 300;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-white;
+            transition: all .3s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+        }
+    }
+
+    &__social {
+        fill: $color-grey;
+
+        transition: all .2s;
+
+        &:hover {
+            fill: $color-primary;
+        }
+    }
+}

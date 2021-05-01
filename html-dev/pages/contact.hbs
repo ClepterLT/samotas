@@ -1,0 +1,53 @@
+{{>base/head
+  bodyClasses=bodyClasses
+}}
+
+    {{>modules/header
+        extraHeaderClasses=''
+    }}
+
+    <main>
+
+        <section class="contact">
+            <div class="contact__wrapper">
+                <h2 class="heading heading--primary">Susisiekite</h2>
+                <p class="cta__text">{{ texts.contact }}</p>
+                <div class="contact-sheet">
+                    <div class="contact-sheet__letter">
+                        <h2 class="heading heading--secondary u-mb-2">Parašykite mums</h2>
+                        <form class="contact-sheet__form">
+                            <input type="text" id="fname" name="fname" placeholder="Jūsų vardas" required>
+                            <div class="contact-sheet__form-wrap">
+                                <input type="email" id="email" name="email" placeholder="El. paštas" required>
+                                <input type="tel" id="tel" name="tel" placeholder="Tel. Nr." required>
+                            </div>
+                            <textarea id="textbox" name="textbox" rows="5" placeholder="Ką norite parašyti..." required></textarea>
+                            <input type="submit" id="submit" name="submit" value="Siųsti">
+                        </form>
+                    </div>
+                    <div class="contact-sheet__info">
+                        <h2 class="heading heading--secondary u-mb-2">Info</h2>
+                        <ul class="contact-sheet__list">
+                            <li class="contact-sheet__item">{{siteTitle}}</li>
+                            <li class="contact-sheet__item">{{footer.address}}</li>
+                            {{#each footer.phones as |phone|}}
+                                <li class="contact-sheet__item"><a href="tel: {{phone}}" class="contact-sheet__link">{{phone}}</a></li>
+                            {{/each}}
+                            <li class="contact-sheet__item"><a href="mailto: samotokeramika@gmail.com" class="contact-sheet__link">{{footer.email}}</a></li>
+                        </ul>
+                        <a href="{{socials.href}}" class="contact-sheet__social">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                                    <title>{{socials.title}}</title>
+                                    <path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h13v-14h-4v-4h4v-2c0-3.306 2.694-6 6-6h4v4h-4c-1.1 0-2 0.9-2 2v2h6l-1 4h-5v14h9c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3z"></path>
+                                </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+{{>base/footer
+  bodyClasses=bodyClasses
+}}

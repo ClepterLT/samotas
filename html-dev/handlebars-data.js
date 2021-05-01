@@ -6,7 +6,7 @@ const ml = {
   home: {href: 'home.html', title: 'Pagrindinis'},
   products: {href: 'products.html', title: 'Keramika'},
   about: {href: 'aboutus.html', title: 'Apie mus'},
-  contact: {href: '#', title: 'Kontaktai'},
+  contact: {href: 'contact.html', title: 'Kontaktai'},
 };
 
 module.exports = {
@@ -25,6 +25,7 @@ module.exports = {
   texts: {
     hero: '20 metų gaminame kartų kartoms. <br> Vazonai, fontanai, šviestuvai pagal individualų užsakymą.',
     cta: 'Turite klausimų? Paskambinkite mums.',
+    contact: 'Turite klausimų? Mielai į juos atsakysime. Susisiekti galite Jums patogiu būdu.',
   },
   carousel: [
     {src: `${imagesRoot}product-1.jpg`, alt: 'Vazonas'},
