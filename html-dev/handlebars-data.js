@@ -18,6 +18,7 @@ module.exports = {
   },
   roots: {
     images: imagesRoot,
+    icons: iconRoot,
   },
   header: {
     links: [ml.home, ml.products, ml.about, ml.contact],

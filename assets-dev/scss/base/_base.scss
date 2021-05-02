@@ -10,27 +10,32 @@ html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px
 
-  @include respond(tab-land) {
+  @include respond(br1060) {
     font-size: 56.25%; // 1rem = 9px
   }
 
-  @include respond(tab-port) {
-    font-size: 50%; // 1rem = 8px
+  @include respond(br820) {
+    font-size: 50%; // 1rem = 9px
   }
 
-  @include respond(big-desktop) {
-    font-size: 75%; // 1rem = 12px
-  }
 }
 
 .row {
   max-width: $row-width;
   margin: 0 auto;
+
+  @include respond(base) {
+    padding: 0 2rem;
+  }
 }
 
 .row-big {
   max-width: $row-big-width;
   margin: 0 auto;
+
+  @include respond(br1200) {
+    padding: 0 2rem;
+  }
 }
 
 section {

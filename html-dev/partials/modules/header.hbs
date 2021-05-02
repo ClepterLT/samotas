@@ -1,9 +1,12 @@
 <header class="header {{extraHeaderClasses}}">
     <div class="row-big u-flex-center">
         <div class="logo">Logo</div>
-        <div class="nav-header-wrap">
+        <div class="nav-header-wrap" id="nav-header">
             {{>modules/nav-header}}
             <a href="products.html" class="button button-primary">Produktai</a>
         </div>
-    </>
+        <a href="javascript:void(0);" class="nav-header__hidden-link" onclick="navHeader()">
+                <svg class="nav-header__icon"><use xlink:href="{{roots.icons}}icon-menu3"></use></svg>
+        </a>
+    </div>
 </header>

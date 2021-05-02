@@ -12,7 +12,12 @@
 .nav-header-wrap {
     display: flex;
     align-items: center;
+
+    @include respond(br680) {
+        display: none;
+    }
 }
+
 
 .nav-header {
     margin-right: 1rem;
@@ -38,5 +43,20 @@
     &__link:active {
         padding-bottom: 2.1rem;
         border-bottom: solid 3px $color-secondary;
+    }
+
+    &__hidden-link {
+        display: none;
+
+        @include respond(br680) {
+            display: inline-block;
+        }
+    }
+
+    &__icon {
+        width: 5rem;
+        height: 5rem;
+        stroke-width: 0;
+        fill: $color-secondary;
     }
 }

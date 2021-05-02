@@ -14,7 +14,7 @@
     <header class="header ">
         <div class="row-big u-flex-center">
             <div class="logo">Logo</div>
-            <div class="nav-header-wrap">
+            <div class="nav-header-wrap" id="nav-header">
                 <nav class="nav-header">
                     <ul class="nav-header__list">
                             <li class="nav-header__item"><a href="home.html" class="nav-header__link">Pagrindinis</a></li>
@@ -25,7 +25,10 @@
                 </nav>
                 <a href="products.html" class="button button-primary">Produktai</a>
             </div>
-        </>
+            <a href="javascript:void(0);" class="nav-header__hidden-link" onclick="navHeader()">
+                    <svg class="nav-header__icon"><use xlink:href="../assets/fonts/symbol-defs.svg#icon-menu3"></use></svg>
+            </a>
+        </div>
     </header>
     <main>
 
@@ -113,5 +116,15 @@
         </footer>  
         <script type="text/javascript" src="../assets/js/app.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script>
+            function navHeader() {
+                var x = document.getElementById("nav-header");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
     </body>
 </html>

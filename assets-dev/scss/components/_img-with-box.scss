@@ -2,8 +2,8 @@
     display: flex;
 
     &__img {
-        height: 50rem;
-        width: auto;
+        max-height: 50rem;
+        max-width: auto;
 
         display: block;
     }
@@ -16,6 +16,16 @@
         margin-top: 4rem;
         margin-left: -12rem;
         align-self: flex-start;
+
+        @include respond(br930) {
+            margin-top: 7rem;
+            margin-left: -30rem;
+        }
+
+        @include respond(br680) {
+            margin-top: 30rem;
+            margin-left: -50rem;
+        }
     }
 
     &__text {
