@@ -1,0 +1,81 @@
+.samotas-select {
+    background-color: $color-grey-medium;
+    cursor: pointer;
+    position: relative;
+    width: 30rem;
+  
+    @include respond(phone) {
+      width: 100%;
+    }
+  
+    select {
+      display: none;
+    }
+  
+    .select-selected {
+      color: $color-black;
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      letter-spacing: 0.1px;
+      padding: 1rem 2rem;
+      border: 1px solid $color-grey-verydark;
+      border-radius: 3px;
+  
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      &:focus {
+        border-color: $color-black;
+      }
+  
+      &::after {
+        content: '';
+        display: inline-block;
+        background-image: url(../fonts/cheveron-down.svg);
+        background-size: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        transition: transform .25s;
+      }
+
+      &.select-arrow-active {
+        &::after {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  
+    .select-items div {
+      cursor: pointer;
+      width: 100%;
+      padding: 5px 1.5rem;
+      text-align: left;
+      color: $color-black;
+      transition: background-color 0.25s;
+    }
+  
+    .select-items {
+      top: 100%;
+      left: 0;
+      width: 100%;
+      padding: 1rem 0;
+      font-size: 1.4rem;
+      background-color: $color-grey-light;
+
+      position: absolute;
+      z-index: 10;
+    }
+  
+    .select-hide {
+      display: none;
+    }
+  
+    .select-items div:hover,
+    .same-as-selected {
+      background-color: $color-grey-verydark;
+    }
+  }

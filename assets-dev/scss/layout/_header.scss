@@ -1,12 +1,16 @@
 .header {
     background-color: $color-primary;
-    height: 7rem;
+    padding: 1rem;
     font-size: 1.7rem;
-    color: $color-white;
 }
 
 .logo {
     font-size: 3rem;
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+    }
 }
 
 .nav-header-wrap {

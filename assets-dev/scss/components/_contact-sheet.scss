@@ -67,7 +67,7 @@
     &__info {
         background-color: $color-pharlap;
         padding: 4rem;
-        color: $color-grey;
+        color: $color-grey-light;
     }
 
     &__list {
@@ -95,7 +95,7 @@
     }
 
     &__social {
-        fill: $color-grey;
+        fill: $color-grey-medium;
 
         transition: all .2s;
 

@@ -8,23 +8,20 @@
 
     <main>
 
-        <section class="categories">
-            <div class="row u-flex u-justify-end">
-                <div class="dropdown">
-                    <div class="dropdown__button">Pasirinkite kateogriją &#8628;</div>
-                    <div class="dropdown__list">
+        <section class="products">
+            <div class="row u-flex u-justify-end u-mb-2">
+                <div class="js-custom-select samotas-select">
+                    <select name="product-categories" id="product-categories">
                         {{#each categories}}
-                        <a href="{{href}}" class="dropdown__item">{{title}}</a>
+                            <option value="{{title}}">{{title}}</option>
                         {{/each}}
-                    </div>
+                    </select>
                 </div>
             </div>
-        </section>
 
-        <section class="products">
             <div class="row u-flex-center u-flex-wrap">
                 {{#each products}}
-                        {{>modules/img-with-box-small}}
+                        {{>components/img-with-box-small}}
                 {{/each}}
             </div>
         </section>

@@ -13,8 +13,8 @@
               <h1 class="heading heading--primary">{{ siteDescription }}</h1>
               <p class="hero-text-box__text">{{{ texts.hero }}}</p>
               <div class="hero-text-box__button-container">
-                <a href="#" class="button button-primary u-mr-2">Produktai</a>
-                <a href="#" class="button button-secondary">Susisiekite</a>
+                <a href="{{ml.products.href}}" class="button button-primary u-mr-2">{{ml.products.title}}</a>
+                <a href="{{ml.contact.href}}" class="button button-secondary">Susisiekite</a>
               </div>
             </div>
           </div>
@@ -28,17 +28,18 @@
                 <img class="carousel-image" data-flickity-lazyload="{{roots.images}}{{src}}" alt="{{alt}}">
               {{/each}}
             </div>
-           <div class="button-wrapper"><a href="#" class="button-inline">Pamatykite daugiau &raquo;</a></div>
+           <div class="button-wrapper"><a href="{{ml.products.href}}" class="button-inline">Pamatykite daugiau &raquo;</a></div>
           </div>
         </section>
 
         <section class="section-about">
           <div class="row">
-            {{>modules/img-with-box
+            {{>components/img-with-box
               photo='about-section.jpg'
               alt='Apie mus'
               head='Apie mus'
               text='Šeimos verslas nuo 1990 m. Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai. Tai dailininkų fantazijos žaismas, meistrų perteikta širdžių šiluma Jums iš kartos į kartą.'
+              link=ml.about.href
               button='Sužinoti daugiau'
             }}
           </div>
