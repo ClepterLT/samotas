@@ -3,6 +3,8 @@
     cursor: pointer;
     position: relative;
     width: 30rem;
+
+    align-self: center;
   
     @include respond(phone) {
       width: 100%;
@@ -32,7 +34,7 @@
       &::after {
         content: '';
         display: inline-block;
-        background-image: url(../fonts/cheveron-down.svg);
+        background-image: url(../images/cheveron-down.svg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;

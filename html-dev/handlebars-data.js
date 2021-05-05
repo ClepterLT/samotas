@@ -1,6 +1,6 @@
 const pagesRoot = 'http://localhost:3000/static_html/';
 const imagesRoot = '../assets/images/';
-const iconRoot = '../assets/fonts/symbol-defs.svg#';
+const iconRoot = '../assets/images/symbol-defs.svg#';
 
 const ml = {
   home: {href: 'home.html', title: 'Pagrindinis'},

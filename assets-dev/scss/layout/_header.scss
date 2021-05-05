@@ -2,6 +2,7 @@
     background-color: $color-primary;
     padding: 1rem;
     font-size: 1.7rem;
+    z-index: 9999;
 }
 
 .logo {
@@ -20,8 +21,20 @@
     @include respond(br680) {
         display: none;
     }
-}
 
+    &--mobile {
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        background-color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 0 2rem 2rem;
+        z-index: 9999;
+    }
+}
 
 .nav-header {
     margin-right: 1rem;
@@ -31,6 +44,13 @@
 
         display: flex;
         align-items: center;
+
+        @include respond(br680) {
+        display: flex;
+        flex-direction: column;
+        justify-items: flex-start;
+        align-items: flex-start;
+        }
     }
 
     &__item {
@@ -49,18 +69,31 @@
         border-bottom: solid 3px $color-secondary;
     }
 
-    &__hidden-link {
+    &__button {
         display: none;
 
+        border: none;
+        background: transparent;
+
         @include respond(br680) {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
 
     &__icon {
-        width: 5rem;
-        height: 5rem;
-        stroke-width: 0;
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
         fill: $color-secondary;
+        font-family: inherit;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &--hidden {
+            display: none;
+        }
     }
 }

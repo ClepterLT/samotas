@@ -1,12 +1,13 @@
 <header class="header {{extraHeaderClasses}}">
     <div class="row-big u-flex-center">
-        <div class="logo"><a href="{{home.link.href}}" class="logo__link">Logo</a></div>
-        <div class="nav-header-wrap" id="nav-header">
-            {{>modules/nav-header}}
-            <a href="products.html" class="button button-primary">Produktai</a>
-        </div>
-        <a href="javascript:void(0);" class="nav-header__hidden-link" onclick="navHeader()">
-                <svg class="nav-header__icon"><use xlink:href="{{roots.icons}}icon-menu3"></use></svg>
-        </a>
+            <div class="logo"><a href="{{home.link.href}}" class="logo__link">Logo</a></div>
+            <div class="nav-header-wrap" id="nav-header-wrap">
+                {{>modules/nav-header}}
+                <a href="products.html" class="button button-primary">Produktai</a>
+            </div>
+            <button type="button" class="nav-header__button">
+                <svg class="nav-header__icon"><use xlink:href="{{roots.icons}}icon-menu"></use></svg>
+                <svg class="nav-header__icon nav-header__icon--hidden"><use xlink:href="{{roots.icons}}icon-close"></use></svg>
+            </button>
     </div>
 </header>
