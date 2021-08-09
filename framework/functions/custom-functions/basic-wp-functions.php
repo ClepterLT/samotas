@@ -54,6 +54,14 @@ function add_additional_class_on_li($classes, $item, $args, $depth)
 }
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 4);
 
+function add_menu_link_class( $atts, $item, $args ) {
+    if (property_exists($args, 'link_class')) {
+      $atts['class'] = $args->link_class;
+    }
+    return $atts;
+  }
+add_filter( 'nav_menu_link_attributes', 'add_menu_link_class', 1, 3 );
+
 // REGISTER IMAGE SIZES
 add_theme_support('post-thumbnails');
 
