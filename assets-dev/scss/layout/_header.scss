@@ -63,10 +63,22 @@
         text-decoration: none;
     }
 
-    &__link:hover,
-    &__link:active {
-        padding-bottom: 2.1rem;
-        border-bottom: solid 3px $color-secondary;
+    &__link::after {
+        display: block;
+        content: "";
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 3px;
+        background-color: $color-secondary;
+        transition: width .3s;
+    }
+
+    &__link:hover::after,
+    &__link:active::after {
+        width: 100%;
+        visibility: visible;
+        opacity: 1;
     }
 
     &__button {

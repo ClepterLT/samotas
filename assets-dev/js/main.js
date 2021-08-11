@@ -1,5 +1,6 @@
 import $ from "jquery";
 import "./custom-selects/custom-selects.controller";
+import "./popup";
 
 $(document).ready(function() {
 

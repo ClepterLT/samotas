@@ -1,0 +1,32 @@
+.cta {
+    color: #fff;
+    background: linear-gradient(to right bottom, #f39558 47%, #eec8b0);
+    padding: 8rem 0; }
+
+.cta__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+
+.cta__text {
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-bottom: 4rem; }
+
+.cta__number {
+    background-color: #f1ece7;
+    padding: 1.6rem 4rem;
+    border-radius: 2px;
+    box-shadow: 0 0.5rem 2rem rgba(8, 3, 3, 0.2);
+    font-size: 2.8rem;
+    color: #080303;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 400;
+    transition: all .2s; }
+
+.cta__number:hover {
+    background-color: #080303;
+    color: #fff;
+    box-shadow: 0 0.5rem 2rem rgba(255, 255, 255, 0.2);
+    transform: scale(1.2); }

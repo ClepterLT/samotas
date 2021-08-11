@@ -31,12 +31,6 @@
                 ?>" /></a></div>
                 <div class="nav-header-wrap" id="nav-header-wrap">
                     <nav class="nav-header">
-                        <!-- <ul class="nav-header__list" id="nav-list">
-                                <li class="nav-header__item"><a href="home.html" class="nav-header__link">Pagrindinis</a></li>
-                                <li class="nav-header__item"><a href="products.html" class="nav-header__link">Keramika</a></li>
-                                <li class="nav-header__item"><a href="aboutus.html" class="nav-header__link">Apie mus</a></li>
-                                <li class="nav-header__item"><a href="contact.html" class="nav-header__link">Kontaktai</a></li>
-                        </ul> -->
                         <?php
                           $args = array(
                             'menu' => 'primary-menu',
@@ -51,7 +45,19 @@
                           wp_nav_menu($args);
                         ?>
                     </nav>
-                    <a href="products.html" class="button button-primary">Produktai</a>
+                    <a href="<?php
+                      $menu_button_link = get_field('menu_button_link');
+                      if ($menu_button_link): echo($menu_button_link);
+                      else: echo("#");
+                      endif;
+                    ?>" class="button button-primary">
+                      <?php
+                        $menu_button_title = get_field('menu_button_title');
+                        if ($menu_button_title): echo($menu_button_title);
+                        else: echo("PRODUKTAI");
+                        endif;
+                      ?>
+                    </a>
                 </div>
                 <button type="button" class="nav-header__button">
                     <svg class="nav-header__icon"><use xlink:href="../assets/images/symbol-defs.svg#icon-menu"></use></svg>
