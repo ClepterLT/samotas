@@ -20,9 +20,6 @@
                             endif;
                           ?>
                         </li>
-                        <!-- <li class="footer__item"><a href="tel: +37069984297" class="footer__link">+37069984297</a></li>
-                        <li class="footer__item"><a href="tel: +37067220134" class="footer__link">+37067220134</a></li>
-                        <li class="footer__item"><a href="tel: 8-45576654" class="footer__link">8-45576654</a></li> -->
                         <?php
                           if( have_rows('contact_phones', 'option') ) :
                             while( have_rows('contact_phones', 'option') ) : the_row();

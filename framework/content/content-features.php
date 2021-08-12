@@ -13,26 +13,41 @@ if( !empty($block['className']) ) {
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
-
-// Load values and assign defaults.
-$title = get_field('hero_title') ?: 'Pavadinimas';
-$description = get_field('hero_description') ?: 'Tekstas';
-$button_left_title = get_field('hero_button_left_title') ?: 'Mygtuko pavadinimas';
-$button_left_link = get_field('hero_button_left_link') ?: 'Mygtuko nuoroda';
-$button_right_title = get_field('hero_button_right_title') ?: 'Mygtuko pavadinimas';
-$button_right_link = get_field('hero_button_right_link') ?: 'Mygtuko nuoroda';
-$bg_image = get_field('hero_background_image');
-
 ?>
-<section class="hero">
-    <div class="row u-flex">
-        <div class="hero-text-box">
-            <h1 class="heading heading--primary"><?= $title ?></h1>
-            <p class="hero-text-box__text"><?= $description ?></p>
-            <div class="hero-text-box__button-container">
-                <a href="<?= $button_left_link ?>" class="button button-primary u-mr-2"><?= $button_left_title ?></a>
-                <a href="<?= $button_right_link ?>" class="button button-secondary"><?= $button_right_title ?></a>
+
+<section class="features">
+    <div class="row u-flex-center u-flex-wrap">
+
+    <?php
+    if( have_rows('feature') ) :
+        while( have_rows('feature') ) : the_row();
+            $icon = get_sub_field('feature_icon');
+            $title = get_sub_field('feature_title');
+            $description = get_sub_field('feature_description');
+    ?>
+            <div class="features-card">
+                <div class="features-card__wrap">
+                    <svg class="features-card__icon">
+                        <use xlink:href="<?= get_template_directory_uri() ?>/assets/images/symbol-defs.svg#<?= $icon ?>"></use>
+                    </svg>
+                    <h3 class="heading heading--tertiary"><?= $title ?></h3>
+                </div>
+                <p class="features-card__text"><?= $description ?></p>
             </div>
+    <?php
+        endwhile;
+    else:
+    ?>
+        <div class="features-card">
+            <div class="features-card__wrap">
+                <svg class="features-card__icon">
+                    <use xlink:href="<?= get_template_directory_uri() ?>/assets/images/symbol-defs.svg#icon-hammer"></use>
+                </svg>
+                <h3 class="heading heading--tertiary">Rankų darbo</h3>
+            </div>
+            <p class="features-card__text">Rankų darbo originalūs vienetiniai ar mažatiražiniai gaminiai.</p>
         </div>
+    <?php endif; ?>
+
     </div>
 </section>

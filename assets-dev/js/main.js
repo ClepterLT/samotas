@@ -1,6 +1,7 @@
 import $ from "jquery";
 import "./custom-selects/custom-selects.controller";
 import "./popup";
+import "./form-validator";
 
 $(document).ready(function() {
 
