@@ -53,7 +53,12 @@ get_header(); ?>
     <?php if ( $product_posts->have_posts() ) :?>
     <div class="row u-flex-center u-flex-wrap">
         <?php while ( $product_posts->have_posts() ) : $product_posts->the_post();
-        $post_id = get_the_ID(); ?>
+            $post_id = get_the_ID();
+            $url = get_permalink( get_page_by_path( 'produktai' ) );
+            $img_src = get_the_post_thumbnail_url();
+            $img_id = get_post_thumbnail_id();
+            $img_alt = get_post_meta($img_id, '_wp_attachment_image_alt', true);
+        ?>
         <div class="img-with-box-small">
             <?= the_post_thumbnail('medium_large', ['class' => 'img-with-box-small__img', 'title' => 'Produkto nuotrauka']); ?>
             <div class="img-with-box-small__box">
@@ -64,7 +69,18 @@ get_header(); ?>
         </div>
         <div class="popup popup__hidden" id="<?= $post_id ?>">
             <div class="popup__header"><button class="popup__button-close">&times;</button></div>
-            <div class="popup__img-wrap"><?= the_post_thumbnail('medium_large', ['class' => 'popup__img', 'title' => 'Produkto nuotrauka']); ?></div>
+            <?php
+                $imgs = get_field('product_imgs');
+            ?>
+            <?php if( $imgs ): ?>
+                <div class="carousel" data-flickity='{ "lazyLoad": 2, "initialIndex": 2, "freeScroll": true, "wrapAround": true, "autoPlay": true, "setGallerySize": false }'>
+                    <?php foreach( $imgs as $img ): ?>
+                        <img class="carousel-image" data-flickity-lazyload="<?= esc_url($img['url']); ?>" alt="<?= esc_attr($img['alt']); ?>">
+                    <?php endforeach; ?>
+                </div>
+            <?php else: ?>
+                <div class="popup__img-wrap"><?= the_post_thumbnail('medium_large', ['class' => 'popup__img', 'title' => 'Produkto nuotrauka']); ?></div>
+            <?php endif; ?>
             <div class="popup__content">
                 <h2 class="heading heading--secondary"><b>Kodas:</b> <?= the_title(); ?></h2>
                 <div class="popup__text"><?= the_content(); ?></div>
@@ -73,12 +89,12 @@ get_header(); ?>
         </div>
         <?php endwhile; ?>
     </div>
-    <div class="row u-flex-center--2">
+    <div class="row u-flex-center--2 u-mt-2">
         <?php echo paginate_links( array(
                 'format' => '?paged=%#%',
                 'current' => max( 1, get_query_var('paged') ),
                 'total' => $product_posts->max_num_pages,
-                'prev_text' => __('Atgal &laquo;'),
+                'prev_text' => __('&laquo; Atgal'),
                 'next_text' => __('Pirmyn &raquo;'),
                 ) ); ?>
     </div>
