@@ -3,6 +3,10 @@
     background: linear-gradient(to right bottom, $color-pharlap 47%, $color-martini);
     padding: 8rem 0;
 
+    @include respond(br680) {
+        padding: 8rem 1rem;
+    }
+
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -13,6 +17,10 @@
         font-size: 2.4rem;
         font-weight: 300;
         margin-bottom: 4rem;
+
+        @include respond(br680) {
+            text-align: center;
+        }
     }
 
     &__number {

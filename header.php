@@ -46,13 +46,13 @@
                         ?>
                     </nav>
                     <a href="<?php
-                      $menu_button_link = get_field('menu_button_link');
+                      $menu_button_link = get_field('menu_button_link', 7);
                       if ($menu_button_link): echo($menu_button_link);
                       else: echo("#");
                       endif;
                     ?>" class="button button-primary">
                       <?php
-                        $menu_button_title = get_field('menu_button_title');
+                        $menu_button_title = get_field('menu_button_title', 7);
                         if ($menu_button_title): echo($menu_button_title);
                         else: echo("PRODUKTAI");
                         endif;
@@ -60,8 +60,8 @@
                     </a>
                 </div>
                 <button type="button" class="nav-header__button">
-                    <svg class="nav-header__icon"><use xlink:href="../assets/images/symbol-defs.svg#icon-menu"></use></svg>
-                    <svg class="nav-header__icon nav-header__icon--hidden"><use xlink:href="../assets/images/symbol-defs.svg#icon-close"></use></svg>
+                    <svg class="nav-header__icon"><use xlink:href="<?php echo get_template_directory_uri() . '/assets/images/symbol-defs.svg#icon-menu'?>"></use></svg>
+                    <svg class="nav-header__icon nav-header__icon--hidden"><use xlink:href="<?php echo get_template_directory_uri() . '/assets/images/symbol-defs.svg#icon-close'?>"></use></svg>
                 </button>
         </div>
     </header>

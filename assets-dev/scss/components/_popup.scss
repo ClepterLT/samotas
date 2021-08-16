@@ -1,7 +1,8 @@
 .popup {
     position: fixed;
-    max-width: 60%;
+    width: 80%;
     height: auto;
+    max-height: 95vh;
     background-color: $color-white;
     top: 50%;
     left: 50%;
@@ -12,7 +13,15 @@
     z-index: 1000;
 
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 5rem 80vh;
+
+    @include respond(br680) {
+        max-width: 95%;
+        width: 95%;
+        grid-template-rows: 5rem 50%;
+        overflow-y: scroll;
+    }
 
     &__overlay {
         position: fixed;
@@ -33,10 +42,22 @@
         padding: 0 2rem;
     }
 
+    &__img-wrap {
+        grid-column: 1 / span 1;
+        overflow: hidden;
+        background-color: $color-secondary;
+
+        @include respond(br680) {
+            grid-column: 1 / span 2;
+            grid-row: 2 / span 1;
+        }
+    }
+
     &__img {
-        grid-template-columns: 1 / span 1;
         width: 100%;
         height: 100%;
+        object-fit: contain;
+        object-position: center;
     }
 
     &__content {

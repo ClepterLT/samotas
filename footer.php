@@ -1,5 +1,5 @@
     <footer id="footer" class="footer ">
-        <div class="row u-flex-center">
+        <div class="row u-flex-center u-flex-wrap">
             
                 <div class="footer__column">
                     <h3 class="heading heading--tertiary">Kontaktai</h3>

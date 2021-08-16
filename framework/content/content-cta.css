@@ -3,6 +3,12 @@
     background: linear-gradient(to right bottom, #f39558 47%, #eec8b0);
     padding: 8rem 0; }
 
+    @media only screen and (max-width: 42.5em) {
+        .cta {
+            padding: 8rem 2rem;
+        }
+    }
+
 .cta__wrapper {
     display: flex;
     flex-direction: column;
@@ -12,6 +18,12 @@
     font-size: 2.4rem;
     font-weight: 300;
     margin-bottom: 4rem; }
+
+    @media only screen and (max-width: 42.5em) {
+        .cta__text {
+            text-align: center;
+        }
+    }
 
 .cta__number {
     background-color: #f1ece7;

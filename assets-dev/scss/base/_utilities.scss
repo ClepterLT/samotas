@@ -26,8 +26,18 @@
     justify-content: space-between;
 }
 
+.u-flex-center--2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
 .u-flex-wrap {
     flex-wrap: wrap;
+
+    @include respond(br680) {
+        gap: 2rem;
+    }
 }
 
 .u-justify-end {

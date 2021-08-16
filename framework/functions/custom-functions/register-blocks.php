@@ -46,5 +46,15 @@ function my_acf_init()
             'icon'				=> 'admin-comments',
             'keywords'			=> array( 'sekcija', 'savybes', 'savybiu' ),
         ));
+
+        acf_register_block(array(
+            'name'				=> 'slider',
+            'title'				=> __('Produktų nuotraukų karuselė'),
+            'render_callback'	=> 'acf_block_render_callback',
+            'enqueue_style'     => get_template_directory_uri() . '/framework/content/content-slider.css',
+            'category'			=> 'embed',
+            'icon'				=> 'admin-comments',
+            'keywords'			=> array( 'sekcija', 'nuotrauku', 'nuotraukų', 'karuselė' ),
+        ));
     }
 }

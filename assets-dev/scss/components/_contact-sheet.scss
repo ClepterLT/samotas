@@ -9,8 +9,19 @@
 
     display: flex;
 
+    @include respond(br680) {
+        flex-wrap: wrap;
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
     &__letter {
         padding: 4rem 6rem;
+
+        @include respond(br680) {
+            flex: 1;
+            padding: 2rem 2rem;
+        }
     }
 
     &__form {
@@ -27,6 +38,10 @@
             margin-bottom: 1.5rem;
             font-size: 1.4rem;
             font-family: inherit;
+
+            @include respond(br680) {
+                flex: 1;
+            }
         }
 
         input[type=submit] {
@@ -42,13 +57,21 @@
 
     &__form-wrap {
         display: flex;
-        justify-content: space-between;
+        gap: 1rem;
+
+        @include respond(br680) {
+            flex-wrap: wrap;
+        }
     }
 
     &__info {
         background-color: $color-pharlap;
         padding: 4rem;
         color: $color-grey-light;
+
+        @include respond(br680) {
+            flex: 1;
+        }
     }
 
     &__list {

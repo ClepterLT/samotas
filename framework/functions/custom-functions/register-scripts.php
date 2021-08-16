@@ -21,11 +21,13 @@ function hd_register_scripts()
     wp_deregister_script('jquery-migrate');
     wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
     wp_register_script('jquery-migrate', includes_url('/js/jquery/jquery-migrate.js'), false, NULL, true);
+    wp_register_script('flickity-js', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js');
 
     // ENQUEUE
     // wp_enqueue_script( 'jquery' );
 
     wp_enqueue_script('app-js');
+    wp_enqueue_script('flickity-js');
 
     // wp_enqueue_script( 'pw-store-locations', get_stylesheet_directory_uri() . '/js/store-locations.js', array( 'jquery', 'pw-google-maps-api' ), null, true );
 

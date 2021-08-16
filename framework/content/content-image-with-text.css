@@ -2,7 +2,6 @@
     display: flex; }
     .img-with-box__img {
       max-height: 50rem;
-      max-width: auto;
       display: block; }
     .img-with-box__box {
       border: 1rem solid #8c4219;
@@ -16,9 +15,14 @@
           margin-top: 7rem;
           margin-left: -30rem; } }
       @media only screen and (max-width: 42.5em) {
+        .img-with-box {
+          flex-wrap: wrap;
+        }
+        .img-with-box__img {
+          max-height: none;
+          width: 100%; }
         .img-with-box__box {
-          margin-top: 30rem;
-          margin-left: -50rem; } }
+          margin: 0; } }
     .img-with-box__text {
       font-size: 1.6rem;
       margin: 1.5rem 0 2.5rem 0; }
